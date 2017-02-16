@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <p>
+  <strong>Titular:</strong>
+  <%= @article.titular %>
+</p>
+ 
+<p>
+  <strong>Content:</strong>
+  <%= @article.content %>
+</p>
+
+<h2>Comments</h2>
+<%= render @article.comments %>
+
+<h2>Add a comment:</h2>
+
+<%= render 'comments/form' %>
+
+
+<%= link_to 'Go Back', controller: 'articles' %> |
+<%= link_to 'Editar', edit_article_path(@article) %>
+
+
+</html>
